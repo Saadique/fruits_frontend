@@ -31,6 +31,11 @@ function Navbar({ handleViewChange }) {
     handleCloseNavMenu();
   }
 
+  const handleFavClick = () => {
+    handleViewChange(false);
+    handleCloseNavMenu();
+  }
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -159,6 +164,13 @@ function Navbar({ handleViewChange }) {
               >
                 Home
               </Button>
+
+              <Button
+                onClick={handleFavClick}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Favourite Fruits
+              </Button>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
@@ -184,7 +196,7 @@ function Navbar({ handleViewChange }) {
                 onClose={handleCloseUserMenu}
               >
                 <MenuItem onClick={handleSettingsClick}>
-                  <Typography textAlign="center">Settings</Typography>
+                  <Typography textAlign="center">Favourte Fruits</Typography>
                 </MenuItem>
 
                 <MenuItem onClick={handleCloseUserMenu}>

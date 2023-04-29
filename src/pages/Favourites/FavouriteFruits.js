@@ -70,11 +70,10 @@ function FavouriteFruits(props) {
                                             
                                                 </div>
                                                 <div class="flex flex-col items-center pb-10">
-                                                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{fruit.name}</h5>
+                                                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Name : {fruit.name}</h5>
+                                                    <p class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Family : {fruit.family}</p>
                                                     <div class="flex mt-4 space-x-3 md:mt-6">
-                                                        <button onClick={handleOnClick(fruit)} href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">
-                                                            Remove
-                                                        </button>
+                            
                                                     </div>
                                                 </div>
                                             </div>
