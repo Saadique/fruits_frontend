@@ -18,7 +18,6 @@ function Home() {
     const [totalPages, setTotalPages] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const scrollRef = useRef(null);
-    const [favouriteFruits, setFavouriteFruits] = useState([]);
 
     const list = useSelector((state) => state.list);
     const dispatch = useDispatch();
@@ -60,10 +59,6 @@ function Home() {
     const handleRemoveFavouriteFruit = (value) => {
         //    setFavouriteFruits([]);
     }
-
-    const addItem = (fruit) => {
-        dispatch({ type: "ADD_ITEM", payload: fruit });
-      };
 
 
     const fetchAllFruits = async () => {

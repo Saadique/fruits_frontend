@@ -5,9 +5,6 @@ export default function FruitCard(props) {
 
     const { fruit, handleAddFavouriteFruits } = props;
 
-    const [favouriteFruits, setFavouriteFruits] = useState([]);
-
-    const [isAdded, setIsAdded] = useState(false);
 
     const list = useSelector((state) => state.list);
 
