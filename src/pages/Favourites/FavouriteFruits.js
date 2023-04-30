@@ -55,11 +55,11 @@ function FavouriteFruits(props) {
                             <div class="bg-sky-50 shadow-md rounded px-8 pt-6 pb-8 mb-4  w-full sm:w-8/12">
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     
-                                    <p>Total Fat : {totalFat}</p>
-                                    <p>Total Carbs : {totalCarbs}</p>
-                                    <p>Total Calories : {totalCalories}</p>
-                                    <p>Total Sugar : {totalSugar}</p>
-                                    <p>Total Protein : {totalProtein}</p>
+                                    <p>Total Fat : <span className='text-emerald-500'>{totalFat}</span></p>
+                                    <p>Total Carbs : <span className='text-emerald-500'>{totalCarbs}</span></p>
+                                    <p>Total Calories : <span className='text-emerald-500'>{totalCalories}</span></p>
+                                    <p>Total Sugar : <span className='text-emerald-500'>{totalSugar}</span></p>
+                                    <p>Total Protein : <span className='text-emerald-500'>{totalProtein}</span></p>
                                 </div>
                             </div>
                         </div>

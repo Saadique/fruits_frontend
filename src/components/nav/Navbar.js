@@ -72,7 +72,6 @@ function Navbar({ handleViewChange }) {
       <AppBar position="static" color='neutral'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -133,7 +132,6 @@ function Navbar({ handleViewChange }) {
               variant="h5"
               noWrap
               component="a"
-              href=""
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -148,15 +146,6 @@ function Navbar({ handleViewChange }) {
               LOGO
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {/* {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              ))} */}
               <Button
                 onClick={handleHomeClick}
                 sx={{ my: 2, color: 'white', display: 'block' }}
