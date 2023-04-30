@@ -7,6 +7,8 @@ import ApiIndex from '../../api/index';
 import CircularProgress from '@mui/material/CircularProgress';
 import Pagination from '@mui/material/Pagination';
 
+import { useSelector, useDispatch } from "react-redux";
+
 function Home() {
     const [isHome, setIsHome] = useState(true);
     const [fruitsData, setFruitsData] = useState([]);
@@ -17,6 +19,9 @@ function Home() {
     const [currentPage, setCurrentPage] = useState(1);
     const scrollRef = useRef(null);
     const [favouriteFruits, setFavouriteFruits] = useState([]);
+
+    const list = useSelector((state) => state.list);
+    const dispatch = useDispatch();
 
     let page = 1;
 
@@ -41,23 +46,24 @@ function Home() {
 
     //callback
     const handleAddFavouriteFruits = (value) => {
-        if (favouriteFruits.length >= 10) {
+        if (list.length >= 10) {
             return;
         }
 
-        const isFruitExist = favouriteFruits.some((fruit) => fruit.id === value.id);
+        const isFruitExist = list.some((fruit) => fruit.id === value.id);
         if (!isFruitExist) {
-            favouriteFruits.push(value);
-            setFavouriteFruits(favouriteFruits);
-            console.log(favouriteFruits);
+            dispatch({ type: "ADD_ITEM", payload: value });
         }
-
     }
 
     //callback
     const handleRemoveFavouriteFruit = (value) => {
         //    setFavouriteFruits([]);
     }
+
+    const addItem = (fruit) => {
+        dispatch({ type: "ADD_ITEM", payload: fruit });
+      };
 
 
     const fetchAllFruits = async () => {
@@ -106,7 +112,7 @@ function Home() {
                         <div class="grid grid-cols-4 gap-y-8 gap-x-6">
                             {!spin && fruitsData.map((item) => (
                                 <div>
-                                    <FruitCard fruit={item} handleAddFavouriteFruits={handleAddFavouriteFruits} />
+                                    <FruitCard fruit={item} handleAddFavouriteFruits={handleAddFavouriteFruits}/>
                                 </div>
                             ))}
                         </div>
@@ -119,7 +125,7 @@ function Home() {
 
 
             {!isHome &&
-                <FavouriteFruits favouriteFruits={favouriteFruits} handleRemoveFavouriteFruit={handleRemoveFavouriteFruit} />
+                <FavouriteFruits />
             }
         </div>
     )

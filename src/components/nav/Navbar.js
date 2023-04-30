@@ -77,7 +77,6 @@ function Navbar({ handleViewChange }) {
               variant="h6"
               noWrap
               component="a"
-              href="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },

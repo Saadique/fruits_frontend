@@ -28,6 +28,7 @@
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.0",
+    "redux": "^4.2.1",
     "rsuite": "^5.28.1",
     "smoothscroll-polyfill": "^0.4.4",
     "svg-loaders-react": "^2.2.1",
